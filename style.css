@@ -295,6 +295,7 @@ form {
 }
 
 .kobnu {
+  display: grid;
   background-color: var(--minblaa);
   border: 2px solid var(--minblaa);
   margin-top: 2rem;
@@ -403,7 +404,7 @@ button:hover {
 
   label {
     color: var(--minhvide);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: "vercetti";
   }
 
