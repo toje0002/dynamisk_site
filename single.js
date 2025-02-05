@@ -4,11 +4,12 @@ const urlParams = new URLSearchParams(queryString);
 
 const id = urlParams.get("id");
 
-let productContainer = document.querySelector(".produktmain");
+let productContainer = document.querySelector("main");
 fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
   .then((response) => response.json())
   .then((data) => {
     productContainer.innerHTML = `
+    <div class="produktmain ${data.discount && "rabat"} ${data.soldout && "udsolgt"}">
     <h2>${data.productdisplayname}</h2>
       <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="${data.productdisplayname}" />
       <img class="udsolgtbillede" src="udsolgt.webp" alt="Sold out" />
@@ -24,8 +25,8 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
             DKK ${data.price},-
           </p>
           <div class="discount">
-            <p>Now DKK 600,-</p>
-            <p>33%</p>
+            <p>Now DKK ${Math.round(data.price - (data.price / 100) * data.discount)},-</p>
+            <p>${data.discount}%</p>
           </div>
         </div>
         <div class="kobnu">
@@ -43,6 +44,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
           </form>
           <button>Add to basket</button>
         </div>
+      </div>
       </div>
     `;
   });

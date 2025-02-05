@@ -157,34 +157,35 @@ header a {
   }
 }
 
-/* .Apparel {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1572.webp);
-}
-
-.Footwear {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/3546.webp);
+.kategoriliste :first-child {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1526.webp);
   background-position: center;
 }
 
-.Accesories {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/2585.webp);
+.kategoriliste :nth-child(2) {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1163.webp);
   background-position: center;
 }
 
-.Personalcare {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/2280.webp);
+.kategoriliste :nth-child(3) {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1571.webp);
   background-position: center;
 }
 
-.Sportinggoods {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/1164.webp);
+.kategoriliste :nth-child(4) {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/11212.webp);
   background-position: center;
 }
 
-.Freeitems {
-  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/8653.webp);
+.kategoriliste :nth-child(5) {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/18443.webp);
+  background-position: center;
+}
+
+.kategoriliste :nth-child(6) {
+  background-image: url(https://kea-alt-del.dk/t7/images/webp/640/2355.webp);
   background-position: -150px;
-} */
+}
 
 /* Produktliste */
 .produktliste {
@@ -231,9 +232,9 @@ header a {
   padding-right: 1rem;
 }
 
-.udsolgt a {
+/* .udsolgt a {
   display: none;
-}
+} */
 
 .udsolgtbillede {
   display: none;
