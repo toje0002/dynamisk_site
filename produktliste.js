@@ -15,9 +15,11 @@ function showList(produkter) {
       (produkt) =>
         `
       
-      <article class="produkt ${produkt.discount && "rabat"} ${produkt.soldout && "udsolgt"}">
+      <article class="produkt ${produkt.discount && "rabat"}">
+      <div class="billede-container">
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp" alt="${produkt.productdisplayname}" />
-          <img class="udsolgtbillede" src="udsolgt.webp" alt="Sold out" />
+          <img class="udsolgtbillede ${produkt.soldout && "udsolgt"}" src="udsolgt.webp" alt="Sold out" />
+          </div>
           <h3>${produkt.productdisplayname}</h3>
           <p class="pris">
             <span>Previously</span>
