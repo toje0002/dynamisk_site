@@ -13,20 +13,25 @@ function showList(produkter) {
   const markup = produkter
     .map(
       (produkt) =>
-        `<article class="produkt">
+        `
+      
+      <article class="produkt ${produkt.discount && "rabat"}">
+      <div class="billede-container">
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp" alt="${produkt.productdisplayname}" />
-          <img class="udsolgtbillede" src="udsolgt.webp" alt="Sold out" />
+          <img class="udsolgtbillede ${produkt.soldout && "udsolgt"}" src="udsolgt.webp" alt="Sold out" />
+          </div>
           <h3>${produkt.productdisplayname}</h3>
           <p class="pris">
             <span>Previously</span>
             DKK ${produkt.price},-
           </p>
           <div class="discount">
-            <p>Now DKK 600,-</p>
-            <p>${produkt.discount}</p>
+            <p>Now DKK ${Math.round(produkt.price - (produkt.price / 100) * produkt.discount)},-</p>
+            <p>${produkt.discount}%</p>
           </div>
-          <a href="produkt.html?id=${produkt.id}">Buy now</a>
-        </article>`
+          <a href="produkt.html?id=${produkt.id}">Read more</a>
+        </article>
+        `
     )
     .join("");
   console.log(markup);
