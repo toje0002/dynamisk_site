@@ -251,6 +251,10 @@ header a {
   border-radius: 5px;
   padding-left: 1rem;
   padding-right: 1rem;
+  animation-name: tilbud;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 /* .udsolgt a {
